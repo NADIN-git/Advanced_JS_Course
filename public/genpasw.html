@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+function readInt(){
+	var number = document.getElementById("dlinaPassw").value;
+	return parseInt(number);
+}
+
+function write(text){
+	document.getElementById("info").innerHTML = text;
+}
+
+
+//function guess(){
+//	write("Всем привеt");
+//	var a = readInt()
+//	alert(a)
+//}
+
+//var answer = parseInt(Math.random() * 100);
+//var tryCount = 0;
+//var maxTryCount = 3;
+		
+
+function guess(){
+	var dlinaPassw = readInt();   			
+	var password = ""
+    var alphabet = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+    for(var i=1; i <= dlinaPassw; i++){    	
+    	var randomIndex = Math.floor(Math.random() * alphabet.length);
+        var randomLetter = alphabet[randomIndex];
+        password=password+randomLetter;
+        //write(password);  
+    }
+
+    //console.log(randomLetter);
+    write(password);  
+    hide("button");
+	hide("dlinaPassw");
+}
+
+</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="#">Генератор паролей</a>
+	</div>
+
+    <div class="contentWrap">
+    	<div class="content">
+    		<div class="center">
+    			<h1>Генератор паролей</h1>
+    			<div class="box">
+        		<p id="info">Укажите длину пароля</p>
+        		<input type="text" id="dlinaPassw">
+				<br>
+				<a href="#" onClick="guess();" id="button">Создать пароль</a>	
+			</div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+	Copyright &copy; Nadezhda Kolotilova
+<div>
+
+</body>
+</html>
