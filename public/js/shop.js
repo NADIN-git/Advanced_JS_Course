@@ -1,49 +1,23 @@
 class List {
     _items = []
 
-    constructor() {
-        let goods = this.fetchGoods()
-        goods = goods.map(item => {
-            return new GoodItem(item)
-        })
-        this._items = goods
-        this.render()
+    constructor(CartInstane) {
+        this.fetchGoods()
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                const goods = data.data.map(item => {
+                    return new GoodItem(item, CartInstane)
+                })
+                this._items = goods
+                this.render()
+            })
     }
 
     fetchGoods() {
-        return [{
-                name: 'Чай',
-                price: 150,
-                img: '/img/tea.jpg'
-            },
-            {
-                name: 'Кофе',
-                price: 150,
-                img: '/img/coffee.jpg'
-            },
-            {
-                name: 'Сладости',
-                price: 150,
-                img: '/img/sweets.jpg'
-            },
-            {
-                name: 'Хлебобулочные изделия',
-                price: 150,
-                img: '/img/bakeryproducts.jpg'
-
-            },
-            {
-                name: 'Орехи',
-                price: 150,
-                img: '/img/nuts.jpg'
-            },
-            {
-                name: 'Сухофрукты',
-                price: 150,
-                img: '/img/driedfruits.jpg'
-            }
-        ]
-
+        const url = 'http://localhost:3000/database/items.json'
+        return fetch(url);
     }
 
     render() {
@@ -74,7 +48,7 @@ class GoodItem {
         if (placeToRender) {
             /*console.log('Товар "', this._name, '" добавлен в корзину')*/
             const addCart = document.createElement('div')
-            const btn = new Button('Tовар добавлен в корзину', this.addToCart.bind(this))
+            const btn = new Button(`Tовар "${this._name}" добавлен в корзину`, this.addToCart.bind(this))
             btn.render(addCart)
             placeToRender.appendChild(addCart)
         }
