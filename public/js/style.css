@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    width: 1400px;
+    height: 1400px;
+    background-color: rgb(101, 111, 121);
+}
+
+.Catalog {
+    width: 1400px;
+    background-color: rgb(101, 111, 121);
+    padding: 16px;
+    color: azure;
+}
+
+.Cart {
+    width: 1400px;
+    background-color: rgb(101, 111, 121);
+    padding: 16px;
+    margin-top: 16px;
+    color: azure;
+}
+
+.CatalogList {
+    padding-top: 20px;
+    padding: 16px;
+
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.CatalogItem {
+    flex-basis: 25%;
+    box-shadow: 0 0 8px 0 #e0e0e0;
+    padding: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.btns {
+    padding-top: 20px;
+    height: 120px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    background-color: rgb(101, 111, 121);
+
+    color: beige;
+    border: 3px solid #fff;
+    /* Белая рамка */
+    border-radius: 50px;
+    /* Радиус скругления */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
