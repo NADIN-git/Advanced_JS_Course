@@ -1,0 +1,10 @@
+{
+    "data":[
+        {"name": "Чай", "price": 150, "img": "/img/tea.jpg"},
+        {"name": "Кофе", "price": 150, "img": "/img/coffee.jpg"},
+        {"name": "Сладости", "price": 150, "img": "/img/sweets.jpg"},
+        {"name": "Хлебобулочные изделия", "price": 150, "img": "/img/bakeryproducts.jpg"},
+        {"name": "Орехи", "price": 150, "img": "/img/nuts.jpg"},
+        {"name": "Сухофрукты", "price": 150, "img": "/img/driedfruits.jpg"}
+    ]    
+}

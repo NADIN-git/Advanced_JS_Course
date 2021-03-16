@@ -1,0 +1,6 @@
+{   
+     "1": {"id": 1, "name": "Чай", "price": 150, "img": "/img/tea.jpg"},
+     "2": {"id": 2,"name": "Кофе", "price": 150, "img": "/img/coffee.jpg"},
+     "3": {"id": 3,"name": "Сладости", "price": 150, "img": "/img/sweets.jpg"}      
+    
+}
