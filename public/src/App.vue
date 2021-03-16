@@ -2,12 +2,15 @@
   <div>
     <Catalog />
     <Cart />
+    <List />
   </div>
 </template>
 
 <script>
 import Catalog from "./Components/Catalog.vue";
 import Cart from "./Components/Cart.vue";
+import List from "./Components/List.vue";
+
 export default {
   data() {
     return {
@@ -18,6 +21,7 @@ export default {
   components: {
     Catalog,
     Cart,
+    List,
   },
   methods: {
     changeMsg() {
