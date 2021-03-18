@@ -19,7 +19,14 @@ export default {
   components: {
     CartItem,
   },
-  props: {},
+  props: {
+    cartData: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
   data() {
     return {
       products: [

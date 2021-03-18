@@ -1,7 +1,7 @@
 <template>
   <div>
     <Catalog />
-    <Cart />
+    <!--Cart v-if="CART.length" :cartData="CART" />-->
     <List />
   </div>
 </template>
@@ -10,6 +10,7 @@
 import Catalog from "./Components/Catalog.vue";
 import Cart from "./Components/Cart.vue";
 import List from "./Components/List.vue";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
@@ -22,6 +23,9 @@ export default {
     Catalog,
     Cart,
     List,
+  },
+  computed: {
+    ...mapGetters(["CART"]),
   },
   methods: {
     changeMsg() {

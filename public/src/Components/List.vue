@@ -4,7 +4,10 @@
       <h1>Отладка</h1>
       {{ getData }}
       <br />
+      <CatalogItem v-for="id in getData" :id="id" :key="id" />
+
       {{ getFullPrice }}
+      {{ getItemsOnPage }}
       <!--CartItem v-for="id in productsArray" :id="id" />-->
     </div>
   </div>
@@ -18,10 +21,10 @@ export default {
     ...mapActions(["requestData"]),
   },
   computed: {
-    ...mapGetters(["getData", "getFullPrice"]),
+    ...mapGetters(["getData", "getFullPrice", "getItemsOnPage"]),
   },
   created() {
-    this.requestData(1);
+    this.requestData(2);
   },
 };
 </script>

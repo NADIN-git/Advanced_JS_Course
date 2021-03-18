@@ -3,7 +3,7 @@
     <!--img :src="require('../img/' + product_data.img)" alt="img" ) />-->
     <p class="CatalogItemName">{{ product_data.name }}</p>
     <p class="CatalogItemPrice">Цена: {{ product_data.price }}</p>
-    <button class="CatalogItemAddToCart" @click="SendDataToParent">
+    <button class="CatalogItemAddToCart" @click="addToCart">
       Добавить в корзину
     </button>
   </div>
@@ -60,8 +60,8 @@ export default {
   },
   computed: {},
   methods: {
-    SendDataToParent() {
-      this.$emit("sendArticle", this.product_data.name);
+    addToCart() {
+      this.$emit("addToCart", this.product_data);
     },
   },
   mounted() {

@@ -1,10 +1,8 @@
 {
-    "data":[
-        {"name": "Чай", "price": 150, "img": "/img/tea.jpg"},
-        {"name": "Кофе", "price": 150, "img": "/img/coffee.jpg"},
-        {"name": "Сладости", "price": 150, "img": "/img/sweets.jpg"},
-        {"name": "Хлебобулочные изделия", "price": 150, "img": "/img/bakeryproducts.jpg"},
-        {"name": "Орехи", "price": 150, "img": "/img/nuts.jpg"},
-        {"name": "Сухофрукты", "price": 150, "img": "/img/driedfruits.jpg"}
-    ]    
+    "7": {"id": 7, "name": "Чай", "price": 150, "img": "/img/tea.jpg"},
+    "8": {"id": 8,"name": "Кофе", "price": 150, "img": "/img/coffee.jpg"},
+    "9": {"id": 9,"name": "Сладости", "price": 150, "img": "/img/sweets.jpg"},
+    "10": {"id": 10,"name": "Хлебобулочные изделия", "price": 150, "img": "/img/bakeryproducts.jpg"},
+    "11": {"id": 11,"name": "Орехи", "price": 150, "img": "/img/nuts.jpg"},
+    "12": {"id": 12,"name": "Сухофрукты", "price": 150, "img": "/img/driedfruits.jpg"}
 }
