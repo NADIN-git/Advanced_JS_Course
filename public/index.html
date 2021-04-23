@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta namr="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My vebserver</title>
-	<link rel="stylesheet" href="./style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Datetime superapp</title>
+	<style>
+		#calcDiv {
+			width: 100%;
+			padding: 50px 0;
+			text-align: center;
+			background-color: lightblue;
+			margin-top: 20px;
+		}
+
+		#timeDiv {
+			width: 100%;
+			padding: 50px 0;
+			text-align: center;
+			background-color: rgb(173, 230, 182);
+			margin-top: 20px;
+		}
+	</style>
+	<script src="./src/main.js" type="module"></script>
 </head>
 
 <body>
-	Урок 8
-	<main></main>
-	<script src="./shop.js"></script>
+	<p>Нажмите кнопку "Калькулятор дат/Таймер", чтобы переключиться между отображением задач</p>
+	<button onclick="myFunction()">Калькулятор дат/Таймер</button>
+
+	<div id="calcDiv">
+		<form id="datecalc">
+			<h3>Калькулятор дат</h3>
+			<label>
+				<strong>Первая дата:</strong>
+				<input type="date" name="firstDate" />
+			</label>
+			<label>
+				<strong>Вторая дата:</strong>
+				<input type="date" name="secondDate" />
+			</label>
+			<button type="submit">Расчитать промежуток</button>
+			<p id="datecalc__result"></p>
+		</form>
+	</div>
+	<div id="timeDiv">
+		<form id="timeTask">
+			<h3>Таймер</h3>
+			<label> <strong>Интервал:</strong>
+				<input type="text" name="timeInput" />
+			</label>
+			<button id="timeStart" type="submit">СТАРТ</button>
+			<button id="timeStop" type="submit">СТОП</button>
+			<p id="timeShow"></p>
+		</form>
+	</div>
+
+	<script>
+		function myFunction() {
+			let x = document.getElementById("calcDiv");
+			let y = document.getElementById("timeDiv");
+			if (x.style.display === "block") {
+				x.style.display = "none";
+				y.style.display = "block";
+			} else {
+				y.style.display = "none";
+				x.style.display = "block"
+			}
+		}
+	</script>
+
 </body>
 
 </html>

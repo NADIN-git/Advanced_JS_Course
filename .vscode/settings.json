@@ -1,0 +1,9 @@
+{
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.windowsEnableConpty": false,
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "terminal.integrated.altClickMovesCursor": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.explorerKind": "external",
+    "terminal.integrated.enableFileLinks": false
+}
